@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/baralho4"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--Começo do Jogador 1-->
+
+        <!--Placar Jogador 1-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginTop="70dp"
+                android:fontFamily="@font/mitr_regular"
+                android:text="Jogador 1:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@color/design_default_color_background"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tvNomeJ1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginTop="70dp"
+                android:background="@drawable/borda_texto"
+                android:fontFamily="@font/mitr_regular"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text=""
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="18sp"
+                android:textStyle="normal">
+
+            </TextView>
+        </LinearLayout>
+
+        <TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="0">
+    <TableRow>
+
+        <TextView
+            android:id="@+id/tvplacar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/borda_texto"
+            android:fontFamily="@font/mitr_regular"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:paddingStart="8dp"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/cardview_dark_background"
+            android:textStyle="normal"
+            tools:text="0" />
+    </TableRow>
+
+</TableLayout>
+
+        <!--Botões do Jogador 1(de 1 á 6)-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/bt1J1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textStyle="bold"
+            android:text="+1"
+            android:onClick="bt1J1"/>
+        <Button
+            android:id="@+id/bt3J1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textStyle="bold"
+            android:text="+3"
+            android:onClick="bt3J1"/>
+        <Button
+            android:id="@+id/bt6J1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textStyle="bold"
+            android:text="+6"
+            android:onClick="bt6J1" />
+    </LinearLayout>
+
+        <!--Botões do Jogador 1(de 9 á voltar)-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt9J1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textStyle="bold"
+            android:text="+9"
+            android:onClick="bt9J1"/>
+        <Button
+            android:id="@+id/bt12J1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textStyle="bold"
+            android:text="+12"
+            android:onClick="bt12J1"/>
+        <Button
+            android:id="@+id/voltarJ1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textStyle="bold"
+            android:text="voltar"
+            android:onClick="btvolt1"/>
+
+    </LinearLayout>
+
+        <!--Começo do Jogador 2(Layout)-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_margin="8dp"
+            android:fontFamily="@font/mitr_regular"
+            android:text="Jogador 2:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/design_default_color_background"
+            android:textSize="18sp"
+            android:textStyle="normal">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvNomeJ2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/borda_texto"
+            android:fontFamily="@font/mitr_regular"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="18sp"
+            android:textStyle="normal">
+        </TextView>
+    </LinearLayout>
+
+        <!--Placar Jogador2-->
+<TableLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:stretchColumns="0">
+    <TableRow>
+
+        <TextView
+            android:id="@+id/tvplacar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/borda_texto"
+            android:fontFamily="@font/mitr_regular"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:paddingStart="8dp"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/cardview_dark_background"
+            android:textStyle="normal"
+            tools:text="0" />
+    </TableRow>
+</TableLayout>
+
+        <!--Botões do Jogador 2 ( de 1 á 6)-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/bt1J2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+           android:textStyle="bold"
+            android:text="+1"
+            android:onClick="bt1J2"/>
+        <Button
+            android:id="@+id/bt3J2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textStyle="bold"
+            android:text="+3"
+            android:onClick="bt3J2"/>
+        <Button
+            android:id="@+id/bt6J2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+           android:textStyle="bold"
+            android:text="+6"
+            android:onClick="bt6J2"/>
+    </LinearLayout>
+
+        <!--Botões do Jogador 2 ( de 9 á voltar)-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <Button
+            android:id="@+id/bt9J2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textStyle="bold"
+            android:text="+9"
+            android:onClick="bt9J2"/>
+        <Button
+            android:id="@+id/bt12J2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textStyle="bold"
+             android:text="+12"
+            android:onClick="bt12J2"/>
+        <Button
+            android:id="@+id/voltarJ2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+           android:textStyle="bold"
+            android:text="voltar"
+            android:onClick="btvolt2"/>
+        </LinearLayout>
+
+    <Space
+        android:layout_width="140dp"
+        android:layout_height="50dp">
+    </Space>
+        <!--Botões de controle-->
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/HIstorico"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            android:text="Histórico dos Jogos"
+            android:onClick="btHistoric"/>
+        <Button
+            android:id="@+id/zerarHist"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            android:text="Zerar os Históricos"
+            android:onClick="btZH"/>
+
+        <Button
+            android:id="@+id/nomes"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:onClick="btnomes"
+            android:text="Nome dos Jogadores"
+            android:textStyle="bold" />
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
+

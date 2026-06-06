@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://android.com"
+    android:shape="rectangle">
+
+    <!-- Cor de fundo interna da caixinha (Branco) -->
+    <solid android:color="#FFFFFF" />
+
+    <!-- Cor e espessura da linha da borda -->
+    <!-- Troque o #FF0000 (Vermelho) pela cor que você preferir -->
+    <stroke
+        android:width="30dp"
+        android:color="#D32F2F" />
+
+    <!-- Cantos arredondados (Aumente o dp para arredondar mais) -->
+    <corners android:radius="20dp" />
+
+</shape>
+

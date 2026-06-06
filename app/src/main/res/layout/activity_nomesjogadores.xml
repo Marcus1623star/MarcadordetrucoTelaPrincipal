@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/baralho4"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context=".nomesjogadores">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:padding="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_margin="8dp"
+            android:fontFamily="@font/mitr_regular"
+            android:text="Jogador 1:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/design_default_color_background"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+        <EditText
+            android:id="@+id/etNome1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_margin="8dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:fontFamily="@font/mitr_regular"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/design_default_color_background"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:inputType="textPersonName"
+            android:hint="Digite o Nome do Jogador 1"
+            android:imeOptions="actionNext"
+            android:maxLines="1"
+            android:nextFocusDown="@id/etNome1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_margin="8dp"
+            android:fontFamily="@font/mitr_regular"
+            android:text="Jogador 2:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/design_default_color_background"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+        <EditText
+            android:id="@+id/etNome2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_margin="8dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:fontFamily="@font/mitr_regular"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/design_default_color_background"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:inputType="textPersonName"
+            android:hint="Digite o Nome do Jogador 2"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:nextFocusDown="@id/etNome2"/>
+
+        <Button
+            android:id="@+id/btJogar"
+            android:layout_width="149dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="35dp"
+            android:text="Jogar"
+            android:textStyle="bold"
+            android:onClick="btJogar"/>
+</LinearLayout>
+
+</ScrollView>
