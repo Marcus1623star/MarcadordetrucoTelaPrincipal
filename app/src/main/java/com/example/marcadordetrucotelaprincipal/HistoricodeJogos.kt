@@ -57,7 +57,6 @@ class HistoricodeJogos : AppCompatActivity() {
     }
 
     fun btvoltar(view: View) {
-        val intent= Intent(this, MainActivity::class.java)
         finish()
     }
 }
