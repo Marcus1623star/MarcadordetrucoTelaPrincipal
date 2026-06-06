@@ -39,6 +39,7 @@ val intent= Intent(this, MainActivity::class.java)
           intent.putExtra("nome2",etNome2.text.toString())
 
           startActivity(intent)
+          finish()
 
       }
 }
