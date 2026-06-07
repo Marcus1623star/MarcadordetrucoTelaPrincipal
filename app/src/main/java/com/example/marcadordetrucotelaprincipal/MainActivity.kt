@@ -259,4 +259,8 @@ class MainActivity : AppCompatActivity() {
         val intent= Intent(this, nomesjogadores::class.java)
         startActivity(intent)
     }
+
+    fun btSair(view: View) {
+        finish()
+    }
 }
