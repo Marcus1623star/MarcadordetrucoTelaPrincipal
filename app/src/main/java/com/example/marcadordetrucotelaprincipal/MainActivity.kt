@@ -261,6 +261,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun btSair(view: View) {
-        finish()
+        finishAffinity()
     }
 }
