@@ -46,8 +46,14 @@ class HistoricodeJogos : AppCompatActivity() {
                 for (partida in listaPartidas) {
                     val dataFormatada = formatoData.format(Date(partida.data))
 
+                    // LÓGICA DE DESTAQUE DO GANHADOR
+                    val p1 =
+                        if (partida.pontos1 > partida.pontos2) "⭐ *${partida.jogador1}*🏆" else partida.jogador1
+                    val p2 =
+                        if (partida.pontos2 > partida.pontos1) "⭐ *${partida.jogador2}*🏆" else partida.jogador2
+
                     textoExibicao.append("📅 $dataFormatada\n")
-                    textoExibicao.append("🏆 ${partida.jogador1} (${partida.pontos1}) x (${partida.pontos2}) ${partida.jogador2}\n")
+                    textoExibicao.append(" $p1 (${partida.pontos1}) x (${partida.pontos2}) $p2\n")
                     textoExibicao.append("---------------------------\n\n")
                 }
 
@@ -56,7 +62,30 @@ class HistoricodeJogos : AppCompatActivity() {
         }
     }
 
+
     fun btvoltar(view: View) {
         finish()
     }
-}
+
+    fun btcompartilhar(view: View) {
+            val tvLista = findViewById<TextView>(R.id.tvListaPartidas)
+            val textoParaCompartilhar = tvLista.text.toString()
+
+            // Verifica se não está vazio e se não é a mensagem padrão de erro
+            if (textoParaCompartilhar.isNotEmpty() && !textoParaCompartilhar.contains("Nenhuma partida")) {
+
+                // Aqui ele já pega o texto com as estrelas e negritos que fizemos acima
+                val mensagemCompleta =
+                    "🏆*CONFIRA MINHAS VITÓRIAS NO TRUCO!! *🏆\n\n$textoParaCompartilhar"
+
+                val intent = Intent(Intent.ACTION_SEND)
+                intent.type = "text/plain"
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Minhas Vitórias no Truco!!")
+                intent.putExtra(
+                    Intent.EXTRA_TEXT,
+                    mensagemCompleta
+                ) // Usando a mensagem com o título
+                startActivity(Intent.createChooser(intent, "Compartilhar via"))
+            }
+        }
+    }
